@@ -23,6 +23,11 @@
     </div>
 </div>
 
+<div class="container mt-2">
+    <strong id="result" class="text-danger"></strong>
+
+</div>
+
 <div class="container mt-3" id="domainDiv" style="display: none;">
     <h3>Domain Information</h3>
     <!-- Domain-related fields go here -->
@@ -31,12 +36,13 @@
             <!-- Left Column -->
             <div class="mb-3">
                 <label for="domainName" class="form-label">Domain Name</label>
-                <input type="text" value="<?= $domain_detail['domainName']  ?>" class="form-control" id="domainName" name="domainName"
-                readonly placeholder="Enter domain name">
+                <input type="text" value="<?= $domain_detail['domainName'] ?>" class="form-control" id="domainName"
+                    name="domainName" readonly placeholder="Enter domain name">
             </div>
             <div class="mb-3">
                 <label for="expiryDate" class="form-label">Domain Expiry Date</label>
-                <input type="date" class="form-control" value="<?= $domain_detail['domainExpdate'] ?>" name="domainExpdate" id="expiryDate" readonly>
+                <input type="date" class="form-control" value="<?= $domain_detail['domainExpdate'] ?>"
+                    name="domainExpdate" id="expiryDate" readonly>
             </div>
             <!-- More domain-related fields can go here -->
         </div>
@@ -44,14 +50,14 @@
             <!-- Right Column -->
             <div class="mb-3">
                 <label for="domainCost" class="form-label">Domain Cost</label>
-                <input type="text" class="form-control" id="domainCost" value="<?= $domain_detail['domainCost'] ?>" name="domainCost"
-                    placeholder="Enter domain cost" readonly>
+                <input type="text" class="form-control" id="domainCost" value="<?= $domain_detail['domainCost'] ?>"
+                    name="domainCost" placeholder="Enter domain cost" readonly>
 
             </div>
             <div class="mb-3">
                 <label for="sellingCost" class="form-label">Selling Cost</label>
-                <input type="text" class="form-control" id="sellingCost" value="<?= $domain_detail['sellingCost'] ?>" name="sellingCost"
-                    placeholder="Enter selling cost" readonly>
+                <input type="text" class="form-control" id="sellingCost" value="<?= $domain_detail['sellingCost'] ?>"
+                    name="sellingCost" placeholder="Enter selling cost" readonly>
 
             </div>
             <!-- More domain-related fields can go here -->
@@ -60,13 +66,15 @@
             <!-- Left Column -->
             <div class="mb-3">
                 <label for="domainProvider" class="form-label">Domain Provider</label>
-                <input type="text" class="form-control" id="domainProvider"  value="<?= $domain_detail['domainProvider'] ?>" name="domainProvider"
-                    placeholder="Enter domain provider name"  readonly>
+                <input type="text" class="form-control" id="domainProvider"
+                    value="<?= $domain_detail['domainProvider'] ?>" name="domainProvider"
+                    placeholder="Enter domain provider name" readonly>
 
             </div>
             <div class="mb-3">
                 <label for="RegistrationDate" class="form-label">Domain Registration Date</label>
-                <input type="text" class="form-control" value="<?= $domain_detail['domainRegdate'] ?>" name="domainRegdate" id="RegistrationDate" readonly>
+                <input type="date" class="form-control" value="<?= $domain_detail['domainRegdate'] ?>"
+                    name="domainRegdate" id="RegistrationDate" readonly>
 
             </div>
             <!-- More domain-related fields can go here -->
@@ -75,12 +83,14 @@
             <!-- Right Column -->
             <div class="mb-3">
                 <label for="email" class="form-label">Registered Email</label>
-                <input type="email" class="form-control" id="email" value="<?= $domain_detail['email'] ?>" name="email" placeholder="Enter Registered Email" readonly>
+                <input type="email" class="form-control" id="email" value="<?= $domain_detail['email'] ?>" name="email"
+                    placeholder="Enter Registered Email" readonly>
 
             </div>
             <div class="mb-3">
                 <label for="contact" class="form-label">Contact No.</label>
-                <input type="text" class="form-control" id="contact" value="<?= $domain_detail['phone'] ?>" name="phone" placeholder="Enter Contact Number" readonly>
+                <input type="text" class="form-control" id="contact" value="<?= $domain_detail['phone'] ?>" name="phone"
+                    placeholder="Enter Contact Number" readonly>
 
             </div>
             <!-- More domain-related fields can go here -->
@@ -88,14 +98,16 @@
         <div class="col-md-6">
             <div class="mb-3">
                 <label for="company" class="form-label">Company Name</label>
-                <input type="text" class="form-control" id="company" value="<?= $domain_detail['company'] ?>" name="company" placeholder="Enter Company Name" readonly>
+                <input type="text" class="form-control" id="company" value="<?= $domain_detail['company'] ?>"
+                    name="company" placeholder="Enter Company Name" readonly>
 
             </div>
         </div>
         <div class="col-md-6">
             <div class="mb-3">
                 <label for="renewalDate" class="form-label">Domain Renewal Year</label>
-                <input type="date" class="form-control" value="<?= $domain_detail['renewalDate'] ?>" name="renewalDate" id="renewalDate" readonly>
+                <input type="date" class="form-control" value="<?= $domain_detail['renewalDate'] ?>" name="renewalDate"
+                    id="renewalDate" readonly>
 
             </div>
         </div>
@@ -116,21 +128,22 @@
             </div>
             <div class="mb-3">
                 <label for="expiryDate" class="form-label">Expiry Date</label>
-                <input type="text" class="form-control" value="<?= $domain_detail['expDate'] ?>" name="expDate" id="expiryDate" readonly>
+                <input type="date" class="form-control" value="<?= $domain_detail['expDate'] ?>" name="expDate"
+                    id="expiryDate" readonly>
 
             </div>
         </div>
         <div class="col-md-6">
             <div class="mb-3">
                 <label for="hostingCost" class="form-label">Hosting Cost</label>
-                <input type="text" class="form-control" id="hostingCost" value="<?= $domain_detail['hostingCost'] ?>" name="hostingCost" readonly
-                    placeholder="Enter hosting cost">
+                <input type="text" class="form-control" id="hostingCost" value="<?= $domain_detail['hostingCost'] ?>"
+                    name="hostingCost" readonly placeholder="Enter hosting cost">
 
             </div>
             <div class="mb-3">
                 <label for="hostingSpace" class="form-label">Hosting Space (GB)</label>
-                <input type="text" class="form-control" id="hostingSpace" value="<?= $domain_detail['hostingSpace'] ?>" name="hostingSpace" readonly
-                    placeholder="Enter hosting space">
+                <input type="text" class="form-control" id="hostingSpace" value="<?= $domain_detail['hostingSpace'] ?>"
+                    name="hostingSpace" readonly placeholder="Enter hosting space">
 
             </div>
         </div>
@@ -146,20 +159,22 @@
             <!-- Left Column -->
             <div class="mb-3">
                 <label for="domainName" class="form-label">Domain Name</label>
-                <input type="text" class="form-control" id="domainName" value="<?= $domain_detail['domain_Name']  ?>" name="domain_Name" readonly
-                    placeholder="Enter domain name">
+                <input type="text" class="form-control" id="domainName" value="<?= $domain_detail['domain_Name'] ?>"
+                    name="domain_Name" readonly placeholder="Enter domain name">
 
             </div>
             <div class="mb-3">
                 <label for="expiryDate" class="form-label">Expiry Date</label>
-                <input type="text" class="form-control" id="expiryDate" value="<?= $domain_detail['ssl_expDate'] ?>" name="ssl_expDate" readonly>
+                <input type="date" class="form-control" id="expiryDate" value="<?= $domain_detail['ssl_expDate'] ?>"
+                    name="ssl_expDate" readonly>
             </div>
         </div>
         <div class="col-md-6">
             <!-- Right Column -->
             <div class="mb-3">
                 <label for="domainCost" class="form-label">Cost</label>
-                <input type="text" class="form-control" id="domainCost" value="<?= $domain_detail['cost'] ?>" name="cost" placeholder="Enter domain cost" readonly>
+                <input type="text" class="form-control" id="domainCost" value="<?= $domain_detail['cost'] ?>"
+                    name="cost" placeholder="Enter domain cost" readonly>
             </div>
         </div>
     </div>
@@ -201,6 +216,33 @@
 
     // Initially call the function to check the status of checkboxes
     showHideDivs();
+
+    // Calculate remaining time to expire domain
+    // Get references to the date input fields
+    const startDateInput = document.getElementById("RegistrationDate");
+    const endDateInput = document.getElementById("expiryDate");
+    const resultParagraph = document.getElementById("result");
+
+    // Function to calculate date difference
+    function calculateDateDifference() {
+        const startDate = new Date(startDateInput.value);
+        const endDate = new Date(endDateInput.value);
+
+        if (!isNaN(startDate.getTime()) && !isNaN(endDate.getTime())) {
+            const difference = Math.abs(endDate - startDate);
+            const differenceInDays = Math.ceil(difference / (1000 * 60 * 60 * 24));
+            resultParagraph.innerText = `The domain will Expire in ${differenceInDays} days.`;
+        } 
+    }
+
+    // Add event listeners to date input fields
+    startDateInput.addEventListener('input', calculateDateDifference);
+    endDateInput.addEventListener('input', calculateDateDifference);
+
+    // Initially calculate the difference
+    calculateDateDifference();
+
+
 </script>
 
 
