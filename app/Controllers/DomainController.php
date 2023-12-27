@@ -20,8 +20,11 @@ class DomainController extends BaseController
         return view('admin/user_list', ['users'=>$users]);
     }
 
-    public function domain_info(){
-        return view('admin/domain_info');
+    public function domain_info($id = null){
+        $domModel = new \App\Models\DomainModel();
+
+        $data['domain_detail'] = $domModel->find($id);
+        return view('admin/domain_info', $data);
     }
 }
 

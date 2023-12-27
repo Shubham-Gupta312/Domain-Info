@@ -33,7 +33,7 @@
                         <?= $user['company'] ?>
                     </td>
                     <td>
-                        <a href="<?= base_url('domain_info')?>">View More</a>
+                        <a href="<?= base_url('domain_info/'.$user['id'])?>">View More</a>
                     </td>
                 </tr>
             <?php endforeach ?>

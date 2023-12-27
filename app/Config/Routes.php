@@ -20,12 +20,13 @@ $routes->get('/logout', 'AdminController::logout');
 
 // Admin dashboard
 
-$routes->get('/admin_dashboard', "AdminController::admin_dashboard");
+$routes->get('/admin_dashboard', "AdminController::admin_dashboard", ['filter' => 'isAdmin']);
 
 
 // Domain 
-$routes->get('/domain_list', 'DomainController::domain_list');
-$routes->get('/domain_info', 'DomainController::domain_info');
+$routes->get('/domain_list', 'DomainController::domain_list', ['filter' => 'isAdmin']);
+$routes->get('/domain_info', 'DomainController::domain_info', ['filter' => 'isAdmin']);
+$routes->get('/domain_info/(:num)', 'DomainController::domain_info/$1', ['filter' => 'isAdmin']);
 
 // Users
-$routes->get('/user_list', 'DomainController::user_list');
+$routes->get('/user_list', 'DomainController::user_list', ['filter' => 'isAdmin']);
