@@ -10,7 +10,7 @@
                 <th scope="col">Domain Name</th>
                 <th scope="col">Domain Provider</th>
                 <th scope='col'>Registered Email</th>
-                <th scope='col'>Company Name</th>
+                <th scope='col'>Expiry Date</th>
                 <th scope="col">Action</th>
             </tr>
         </thead>
@@ -30,7 +30,7 @@
                         <?= $user['email'] ?>
                     </td>
                     <td>
-                        <?= $user['company'] ?>
+                        <?= $user['domainExpdate'] ?>
                     </td>
                     <td>
                         <a href="<?= base_url('domain_info/'.$user['id'])?>">View More</a>

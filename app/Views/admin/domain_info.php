@@ -227,22 +227,25 @@
     function calculateDateDifference() {
         const startDate = new Date(startDateInput.value);
         const endDate = new Date(endDateInput.value);
+        const today = new Date(); // Get today's date
 
         if (!isNaN(startDate.getTime()) && !isNaN(endDate.getTime())) {
-            const difference = Math.abs(endDate - startDate);
-            const differenceInDays = Math.ceil(difference / (1000 * 60 * 60 * 24));
-            resultParagraph.innerText = `The domain will Expire in ${differenceInDays} days.`;
-        } 
+            if (endDate < today) {
+                // Domain has expired
+                resultParagraph.innerText = 'The domain has expired. Please renew it.';
+            } else {
+                const difference = Math.abs(endDate - today);
+                const differenceInDays = Math.ceil(difference / (1000 * 60 * 60 * 24));
+                resultParagraph.innerText = `The domain will expire in ${differenceInDays} days. Domain expiry date is ${endDate.toDateString()}.`;
+            }
+        }
     }
-
     // Add event listeners to date input fields
     startDateInput.addEventListener('input', calculateDateDifference);
     endDateInput.addEventListener('input', calculateDateDifference);
 
     // Initially calculate the difference
     calculateDateDifference();
-
-
 </script>
 
 
