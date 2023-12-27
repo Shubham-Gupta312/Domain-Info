@@ -9,6 +9,7 @@
                 <th scope="col">S.no</th>
                 <th scope="col">Email</th>
                 <th scope="col">Contact Detail</th>
+                <th scope="col">Action</th>
             </tr>
         </thead>
         <tbody>
@@ -22,6 +23,9 @@
                     </td>
                     <td>
                         <?= $user['phone'] ?>
+                    </td>
+                    <td>
+                        <a href="<?= base_url('user_list/remove/'.$user['id']) ?>" ><button class="btn btn-danger">Remove User</button></a>
                     </td>
                 </tr>
             <?php endforeach ?>

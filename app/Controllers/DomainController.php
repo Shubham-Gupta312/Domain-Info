@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+use App\Models\AdminModel;
 
 class DomainController extends BaseController
 {
@@ -15,9 +16,16 @@ class DomainController extends BaseController
 
     public function user_list()
     {
-        $user_list = new \App\Models\AdminModel();
+        $user_list = new AdminModel();
         $users = $user_list->findAll();
         return view('admin/user_list', ['users'=>$users]);
+    }
+
+    public function remove($id = null)
+    {
+        $deleteUser = new AdminModel();
+        $deleteUser->delete($id);
+        return redirect()->to(base_url('user_list'));
     }
 
     public function domain_info($id = null){

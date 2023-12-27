@@ -30,3 +30,4 @@ $routes->get('/domain_info/(:num)', 'DomainController::domain_info/$1', ['filter
 
 // Users
 $routes->get('/user_list', 'DomainController::user_list', ['filter' => 'isAdmin']);
+$routes->get('user_list/remove/(:num)', 'DomainController::remove/$1', ['filter' => 'isAdmin']);
