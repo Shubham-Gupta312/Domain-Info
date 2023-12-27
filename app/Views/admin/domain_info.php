@@ -221,7 +221,7 @@
     // Get references to the date input fields
     const startDateInput = document.getElementById("RegistrationDate");
     const endDateInput = document.getElementById("expiryDate");
-    const resultParagraph = document.getElementById("result");
+    const resultText = document.getElementById("result");
 
     // Function to calculate date difference
     function calculateDateDifference() {
@@ -232,11 +232,11 @@
         if (!isNaN(startDate.getTime()) && !isNaN(endDate.getTime())) {
             if (endDate < today) {
                 // Domain has expired
-                resultParagraph.innerText = 'The domain has expired. Please renew it.';
+                resultText.innerText = 'The domain has expired. Please renew it.';
             } else {
                 const difference = Math.abs(endDate - today);
                 const differenceInDays = Math.ceil(difference / (1000 * 60 * 60 * 24));
-                resultParagraph.innerText = `The domain will expire in ${differenceInDays} days. Domain expiry date is ${endDate.toDateString()}.`;
+                resultText.innerText = `The domain will expire in ${differenceInDays} days. Domain expiry date is ${endDate.toDateString()}.`;
             }
         }
     }
